@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 6</title>
+</head>
+
+<body>
+        <h3>Ingresa el día:</h3>
+        <input type="number" id="dia" value="1">
+        <button onclick="validarDia()">Validar día</button>
+
+        <h3>Ingresa el mes:</h3>
+        <input type="number" id="mes" value="1">
+        <button onclick="validarMes()">Validar mes</button>
+
+        <h3>Ingresa el año:</h3>
+        <input type="number" id="anio" value="1900">
+
+        <button onclick="mostrarRespuesta()">Quiero saber la fecha</button>
+    
+        <script>  
+
+            function validarDia() {
+                var dia = document.getElementById("dia").value;
+
+                if (dia > 31) {
+                    alert("Día no válido" + "\n" + "Escribe de nuevo la fecha");
+                } else {
+                    alert("Día válido");
+                    var dia = document.getElementById("dia").value;
+                }
+
+            }
+
+            function validarMes() {
+                var mes = document.getElementById("mes").value;
+                if (mes > 12) {
+                    mes = 0;
+                    alert("Mes no válido" + "\n" + "Escribe de nuevo la fecha");
+                } else {
+                    alert("Mes válido");
+                    var mes = document.getElementById("mes").value;
+                }
+            }
+
+            function mostrarRespuesta() {
+                
+                var dia = document.getElementById("dia").value;
+                var mes = document.getElementById("mes").value;
+                var anio = document.getElementById("anio").value;
+
+                alert("La fecha es "+ "\n" + dia + " / " + mes + " / " + anio); 
+            }
+
+        </script>
+</body>
+</html>
