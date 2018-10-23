@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 4</title>
+</head>
+
+<body>
+        <h3>Pepe: ¿cuál número quieres saber si par o impar, primo o no?</h3>
+        <input type="number" id="num" value="1">
+        <button onclick="mostrarRespuesta()">Quiero saber</button>
+    
+        <script>            
+            function mostrarRespuesta() {
+                var num = document.getElementById("num").value;
+
+
+
+                if (num % 2 == 0) {
+                    alert("Es par");
+                } else {
+                    alert("Es impar");
+                }
+
+                if (num===1) {
+                    alert("No es primo");
+                }
+                else if(num === 2) {
+                    alert(num + " es primo");
+                } else {
+                    for(var x = 2; x < num; x++) { 
+                        if(num % x === 0) {
+                            alert("No es primo");
+                        }
+                    }
+                    alert(num + " es primo");
+                    }
+                }
+
+        </script>
+</body>
+</html>
