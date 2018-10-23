@@ -16,8 +16,8 @@
             function mostrarRespuesta() {
                 var frase = document.getElementById("frase").value;
                 
-                alert(frase.split("").reverse().join(""));
-                alert("Tiene " + frase.split("").length + " caracteres");
+                alert("Tu frase transformada: "+ "\n" + frase.split("").reverse().join(""));
+                alert("Tiene " + frase.split("").length + " caracteres.");
                 alert("Hay " + (frase.split(" ").length - 1) + " espacios en la frase.");
             }
 
