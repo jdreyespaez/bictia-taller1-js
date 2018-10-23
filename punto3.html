@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 1</title>
+</head>
+
+<body>
+        <h3>¿Cuántas personas quieren ingresar su edad?</h3>
+        <input type="number" id="numeroPersonas" value="1">
+        <button onclick="mostrarPersonas()">Recolectar datos de las personas</button>
+    
+        <script>            
+            function mostrarPersonas(numeroPersonas) {
+                var numeroPersonas = document.getElementById("numeroPersonas").value;
+
+                var i = 0;
+                var edad;
+                sum = 0;
+                promedio = 0;
+
+                for(i=0; i<numeroPersonas; i++) {   
+                    edad = parseInt(prompt('Ingresar la edad de la persona '+(i+1)+' de '+numeroPersonas));
+                    if (edad < 0) {
+                        alert("Edad no válida");
+                        edad = 0;
+                        edad = parseInt(prompt('Ingresar la edad de la persona '+(i+1)+' de '+numeroPersonas));
+                        sum += edad;
+                    } else {
+                    sum += edad;
+                    }
+                }
+                console.log("La sumatoria de todas las edad es: " + sum);
+                console.log("Número de personas que ingresaron edad: " + numeroPersonas);
+
+                promedio = sum/numeroPersonas;
+                alert('Promedio de edad: '+ promedio);
+
+            }
+        </script>
+</body>
+</html>
