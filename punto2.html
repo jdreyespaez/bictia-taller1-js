@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Punto 2</title>
-        
-    <h3>¿Cuál número quieres saber su tabla de multipicar del 1 al 10?</h3>
-
-    <input type="number" id="numeroElegido" value="2">
-
-    <p>Haz clic en el botón para mostrarte la tabla.</p>
-
-    <button onclick="tablaDeMultiplicar()">Quiero saber</button>
-
-    <script>            
-        function tablaDeMultiplicar(x, display) {
-
-            var x = document.getElementById("numeroElegido").value;
-                
-                for (i = 1; i <= 10; i++) {
-                    var resultado = i * x;
-                    display += x + " * " + i + " = " + resultado + "\n";
-                }
-                alert(display);
-            }
-    </script>
-
-
+    
 
 </head>
+
 <body>
+        <h3>¿Cuál número quieres saber su tabla de multipicar del 1 al 10?</h3>
+
+        <input type="number" id="numeroElegido" value="2">
+    
+        <p>Haz clic en el botón para mostrarte la tabla.</p>
+    
+        <button onclick="tablaDeMultiplicar()">Quiero saber</button>
+    
+        <script>            
+            function tablaDeMultiplicar(x, display) {
+    
+                var x = document.getElementById("numeroElegido").value;
+                    
+                    for (i = 1; i <= 10; i++) {
+                        var resultado = i * x;
+                        display += x + " * " + i + " = " + resultado + "\n";
+                    }
+                    alert(display);
+                }
+        </script>
 </body>
 </html>
