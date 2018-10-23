@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 5 - OK</title>
+</head>
+
+<body>
+        <h3>Ingresa la frase</h3>
+        <input type="text" id="frase" value="Tu frase va aquí">
+        <button onclick="mostrarRespuesta()">Quiero transformarla</button>
+    
+        <script>            
+            function mostrarRespuesta() {
+                var frase = document.getElementById("frase").value;
+                
+                alert(frase.split("").reverse().join(""));
+                alert("Tiene " + frase.split("").length + " caracteres");
+                alert("Hay " + (frase.split(" ").length - 1) + " espacios en la frase.");
+            }
+
+        </script>
+</body>
+</html>
