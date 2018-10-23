@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 1</title>
+</head>
+
+<body>
+        <h3>¿Cuántos alumnos hay en el curso de JavaScript?</h3>
+        <input type="number" id="numeroEstudiantes" value="1">
+        <button onclick="mostrarEstudiantes()">Mostrar</button>
+    
+        <script>            
+            function mostrarEstudiantes(numeroEstudiantes) {
+                var numeroEstudiantes = document.getElementById("numeroEstudiantes").value;
+
+                var i = 0;     // Loop iterator
+                var nota; // Input from user
+                sum = 0; //initialise sum
+                promedio = 0;
+
+                for(i=0; i<numeroEstudiantes; i++) {   
+                    nota = parseInt(prompt('Entrar nota del alumno '+(i+1)+' de '+numeroEstudiantes));
+                    if (nota > 5) {
+                        alert("Nota no válida");
+                        nota = 0;
+                        nota = parseInt(prompt('Entrar nota del alumno '+(i+1)+' de '+numeroEstudiantes));
+                        sum += nota;
+                    } else {
+                    sum += nota;
+                    }
+                }
+                promedio = sum/numeroEstudiantes;
+
+                console.log('Promedio de los estudiantes: '+ promedio);
+
+                alert();
+
+            }
+        </script>
+</body>
+</html>

@@ -11,18 +11,13 @@
 
 <body>
         <h3>¿Cuál número quieres saber su tabla de multipicar del 1 al 10?</h3>
-
-        <input type="number" id="numeroElegido" value="2">
-    
+        <input type="number" id="numeroElegido" value="1">
         <p>Haz clic en el botón para mostrarte la tabla.</p>
-    
         <button onclick="tablaDeMultiplicar()">Quiero saber</button>
     
         <script>            
             function tablaDeMultiplicar(x, display) {
-    
                 var x = document.getElementById("numeroElegido").value;
-                    
                     for (i = 1; i <= 10; i++) {
                         var resultado = i * x;
                         display += x + " * " + i + " = " + resultado + "\n";
