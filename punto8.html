@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Punto 8</title>
+</head>
+
+<body>
+        <h3>Figura A y B se ven por Consola</h3>
+
+        <h3>Ingresa un número para la Figura C</h3>
+        <input type="number" id="num" value="1">
+        <button onclick="mostrarFiguraC()">Quiero verla</button>
+    
+        <script>            
+            function mostrarFiguraC() {
+                var num = document.getElementById("num").value;
+                
+                for (i = 1; i <= num; i++) {
+                    console.log("*" + i);
+                }
+            }
+
+        </script>
+</body>
+</html>
