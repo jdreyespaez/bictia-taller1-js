@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Punto 4 - PENDIENTE</title>
+    <title>Punto 4 - OK</title>
 </head>
 
 <body>
@@ -12,30 +12,36 @@
         <input type="number" id="num" value="1">
         <button onclick="mostrarRespuesta()">Quiero saber</button>
     
-        <script>            
+        <script>
+           
             function mostrarRespuesta() {
+                var primo = true;
+                var par = true;
                 var num = document.getElementById("num").value;
 
                 if (num % 2 == 0) {
-                    alert("Es par");
+                    par = true;
                 } else {
-                    alert("Es impar");
+                    par = false;
                 }
 
-                if (num===1) {
-                    alert("No es primo");
+                if (num == 1) {
+                    primo = false;
                 }
-                else if(num === 2) {
-                    alert(num + " es primo");
+                else if(num == 2) {
+                    primo = true;
                 } else {
-                    for(var x = 2; x < num; x++) { 
-                        if(num % x === 0) {
-                            alert("No es primo");
-                        }
-                    }
-                    alert(num + " es primo");
+                    for(var i = 2; i < num; i++) { 
+                        if(num % i == 0) {
+                            primo = false;
+                            break;
+                        } 
                     }
                 }
+                console.log("¿" + num + " es par? " + par);
+                console.log("¿" + num + " es primo? " + primo);
+            }
+
 
         </script>
 </body>
